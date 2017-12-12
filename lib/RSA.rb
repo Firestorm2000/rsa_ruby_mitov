@@ -1,9 +1,9 @@
 require 'prime'
 class RSA
-	@n = 0
-	@e = 0
-	@d = 0
-   def initialize n, e, d
+	@n 
+	@e 
+	@d 
+   def initialize n=0, e=0, d=0
 
 	@n = n
 	@d= d
