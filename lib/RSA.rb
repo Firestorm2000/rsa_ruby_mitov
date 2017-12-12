@@ -50,12 +50,11 @@ class RSA
    end
    
    def encrypt message
-      #encrypts the message passed. The message is of type string. Encrypts each symbol of this string by using its ASCII number representation and returns the encrypted message.
-   end
+	return message.chars.map {|c| c.ord ** @e % @n}
+     end
    
    def decrypt message
-      #decrypts the message passed. The message is of type string. Decrypts each symbol of this string Encrypts each symbol of this string by using its ASCII number representationand returns the decrypted message. 
+return (message.map {|c| (c ** @d % @n).chr}).join("")
    end
 end
- #val=RSA.new(3,5,6)
-#puts val.n
+ 
